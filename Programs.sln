@@ -1,25 +1,72 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programs", "Programs.csproj", "{BF11330F-2972-4DAC-8FDA-8052D5BBDF23}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BF11330F-2972-4DAC-8FDA-8052D5BBDF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BF11330F-2972-4DAC-8FDA-8052D5BBDF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BF11330F-2972-4DAC-8FDA-8052D5BBDF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BF11330F-2972-4DAC-8FDA-8052D5BBDF23}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DB0B728F-7FC2-4C12-A9A6-6B4D488EF13A}
-	EndGlobalSection
-EndGlobal
+// 1. Calculator
+char op = '+';
+int num1 = 10, num2 = 5;
+switch (op)
+{
+    case '+': Console.WriteLine(num1 + num2); break;
+    case '-': Console.WriteLine(num1 - num2); break;
+    case '*': Console.WriteLine(num1 * num2); break;
+    case '/': Console.WriteLine(num2 != 0 ? num1 / num2 : "Divide by 0 error"); break;
+    default: Console.WriteLine("Invalid operator"); break;
+}
+
+// 2. Day of the week
+int day = 3;
+switch (day)
+{
+    case 1: Console.WriteLine("Monday"); break;
+    case 2: Console.WriteLine("Tuesday"); break;
+    case 3: Console.WriteLine("Wednesday"); break;
+    case 4: Console.WriteLine("Thursday"); break;
+    case 5: Console.WriteLine("Friday"); break;
+    case 6: Console.WriteLine("Saturday"); break;
+    case 7: Console.WriteLine("Sunday"); break;
+    default: Console.WriteLine("Invalid day"); break;
+}
+
+// 3. Days in a month
+int month = 2;
+switch (month)
+{
+    case 2: Console.WriteLine("28 or 29 days"); break;
+    case 4:
+    case 6:
+    case 9:
+    case 11: Console.WriteLine("30 days"); break;
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12: Console.WriteLine("31 days"); break;
+    default: Console.WriteLine("Invalid month"); break;
+}
+
+// 4. Grade to remark
+char grade = 'B';
+switch (grade)
+{
+    case 'A': Console.WriteLine("Excellent"); break;
+    case 'B': Console.WriteLine("Good"); break;
+    case 'C': Console.WriteLine("Average"); break;
+    case 'D': Console.WriteLine("Below Average"); break;
+    case 'F': Console.WriteLine("Fail"); break;
+    default: Console.WriteLine("Invalid Grade"); break;
+}
+
+// 5. Menu-driven: Area calculator
+int choice = 1; // 1 = Circle, 2 = Square
+double radius = 3.5, side = 4;
+switch (choice)
+{
+    case 1:
+        Console.WriteLine("Area of Circle: " + (Math.PI * radius * radius));
+        break;
+    case 2:
+        Console.WriteLine("Area of Square: " + (side * side));
+        break;
+    default:
+        Console.WriteLine("Invalid choice");
+        break;
+}
